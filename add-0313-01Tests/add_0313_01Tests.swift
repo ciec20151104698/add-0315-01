@@ -1,0 +1,36 @@
+//
+//  add_0313_01Tests.swift
+//  add-0313-01Tests
+//
+//  Created by s20151104698 on 2017/3/13.
+//  Copyright © 2017年 s20151104698. All rights reserved.
+//
+
+import XCTest
+@testable import add_0313_01
+
+class add_0313_01Tests: XCTestCase {
+    
+    override func setUp() {
+        super.setUp()
+        // Put setup code here. This method is called before the invocation of each test method in the class.
+    }
+    
+    override func tearDown() {
+        // Put teardown code here. This method is called after the invocation of each test method in the class.
+        super.tearDown()
+    }
+    
+    func testExample() {
+        // This is an example of a functional test case.
+        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    }
+    
+    func testPerformanceExample() {
+        // This is an example of a performance test case.
+        self.measure {
+            // Put the code you want to measure the time of here.
+        }
+    }
+    
+}
