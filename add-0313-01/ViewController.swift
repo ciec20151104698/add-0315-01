@@ -23,6 +23,7 @@ class ViewController: UIViewController {
     var zero:String!=""
     var temp:String!=""
     var sign:String!=""
+    var point:String!=""
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -167,25 +168,57 @@ class ViewController: UIViewController {
         sum1.text=""
     }
     @IBAction func point(_ sender: UIButton) {
-        
+        if(sum1.text!.contains("."))
+        {
+            sum1.text = sum1.text
+        }
+        else
+        {
+            point = "."
+            sum1.text = sum1.text! + "."
+        }
     }
     @IBAction func addadd(_ sender: UIButton) {
-        var joker:Int
-        switch sign {
-        case "+" :
-            joker = Int(temp!)! + Int(sum1.text!)!
-            sum1.text = "\(joker)"
-        case "-" :
-            joker = Int(temp!)! - Int(sum1.text!)!
-            sum1.text = "\(joker)"
-        case "x" :
-            joker = Int(temp!)! * Int(sum1.text!)!
-            sum1.text = "\(joker)"
-        case "/" :
-            joker = Int(temp!)! / Int(sum1.text!)!
-            sum1.text = "\(joker)"
-        default:
-            sum1.text="error"
+        
+        if(point == ".")
+        {
+            var joker1:Float
+            switch sign {
+            case "+" :
+                joker1 = Float(temp!)! + Float(sum1.text!)!
+                sum1.text = "\(joker1)"
+            case "-" :
+                joker1 = Float(temp!)! - Float(sum1.text!)!
+                sum1.text = "\(joker1)"
+            case "x" :
+                joker1 = Float(temp!)! * Float(sum1.text!)!
+                sum1.text = "\(joker1)"
+            case "/" :
+                joker1 = Float(temp!)! / Float(sum1.text!)!
+                sum1.text = "\(joker1)"
+            default:
+                sum1.text="error"
+            }
+        }
+        else
+        {
+            var joker:Int
+            switch sign {
+            case "+" :
+                joker = Int(temp!)! + Int(sum1.text!)!
+                sum1.text = "\(joker)"
+            case "-" :
+                joker = Int(temp!)! - Int(sum1.text!)!
+                sum1.text = "\(joker)"
+            case "x" :
+                joker = Int(temp!)! * Int(sum1.text!)!
+                sum1.text = "\(joker)"
+            case "/" :
+                joker = Int(temp!)! / Int(sum1.text!)!
+                sum1.text = "\(joker)"
+            default:
+                sum1.text="error"
+            }
         }
     }
     override func didReceiveMemoryWarning() {
