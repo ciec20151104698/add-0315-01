@@ -138,51 +138,52 @@ class ViewController: UIViewController {
         {
             sum1.text = zero;
         }
-        else
-        {
+        else if(sum1.text == "0"){
+            sum1.text = "0"
+        }
+        else{
             sum1.text! = sum1.text! + zero;
         }
     }
     @IBAction func add(_ sender: UIButton) {
-        sum1.text="+"
         sign="+"
         temp = sum1.text
         sum1.text=""
        
     }
     @IBAction func reduce(_ sender: UIButton) {
-        sum1.text="-"
         sign="-"
         temp = sum1.text
         sum1.text=""
     }
     @IBAction func ride(_ sender: UIButton) {
-        sum1.text="x"
         sign="x"
         temp = sum1.text
         sum1.text=""
     }
     @IBAction func divide(_ sender: UIButton) {
-        sum1.text="／"
-        sign="／"
+        sign="/"
         temp = sum1.text
         sum1.text=""
+    }
+    @IBAction func point(_ sender: UIButton) {
+        
     }
     @IBAction func addadd(_ sender: UIButton) {
         var joker:Int
         switch sign {
         case "+" :
             joker = Int(temp!)! + Int(sum1.text!)!
-            sum1.text! = "\(joker)"
+            sum1.text = "\(joker)"
         case "-" :
             joker = Int(temp!)! - Int(sum1.text!)!
-            sum1.text! = "\(joker)"
+            sum1.text = "\(joker)"
         case "x" :
             joker = Int(temp!)! * Int(sum1.text!)!
-            sum1.text! = "\(joker)"
+            sum1.text = "\(joker)"
         case "/" :
             joker = Int(temp!)! / Int(sum1.text!)!
-            sum1.text! = "\(joker)"
+            sum1.text = "\(joker)"
         default:
             sum1.text="error"
         }
