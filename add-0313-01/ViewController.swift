@@ -182,19 +182,19 @@ class ViewController: UIViewController {
         
         if(point == ".")
         {
-            var joker1:Float
+            var joker1:Double
             switch sign {
             case "+" :
-                joker1 = Float(temp!)! + Float(sum1.text!)!
+                joker1 = Double(temp!)! + Double(sum1.text!)!
                 sum1.text = "\(joker1)"
             case "-" :
-                joker1 = Float(temp!)! - Float(sum1.text!)!
+                joker1 = Double(temp!)! - Double(sum1.text!)!
                 sum1.text = "\(joker1)"
             case "x" :
-                joker1 = Float(temp!)! * Float(sum1.text!)!
+                joker1 = Double(temp!)! * Double(sum1.text!)!
                 sum1.text = "\(joker1)"
             case "/" :
-                joker1 = Float(temp!)! / Float(sum1.text!)!
+                joker1 = Double(temp!)! / Double(sum1.text!)!
                 sum1.text = "\(joker1)"
             default:
                 sum1.text="error"
@@ -221,6 +221,7 @@ class ViewController: UIViewController {
             }
         }
     }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
