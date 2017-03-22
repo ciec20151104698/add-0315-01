@@ -171,7 +171,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.84506796217312086" green="1" blue="0.97352819960940085" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.90071482219999999" green="1" blue="0.86034734719999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="tintColor" red="0.089853523202717223" green="0.41315968902779765" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <toolbarItems/>

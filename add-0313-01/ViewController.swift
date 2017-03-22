@@ -171,7 +171,11 @@ class ViewController: UIViewController {
         sum1.text=""
     }
     @IBAction func point(_ sender: UIButton) {
-        if(sum1.text!.contains("."))
+        if(sum1.text=="")
+        {
+            sum1.text=""
+        }
+        else if(sum1.text!.contains("."))
         {
             sum1.text = sum1.text
         }
