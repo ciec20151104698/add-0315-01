@@ -24,6 +24,7 @@ class ViewController: UIViewController {
     var temp:String!=""
     var sign:String!=""
     var point:String!=""
+    var index:String!=""
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -31,6 +32,8 @@ class ViewController: UIViewController {
     
     @IBAction func back(_ sender: UIButton) {
         sum1.text=""
+        point=""
+        sign=""
     }
     @IBAction func one(_ sender: UIButton) {
         one = "1"
@@ -194,8 +197,14 @@ class ViewController: UIViewController {
                 joker1 = Double(temp!)! * Double(sum1.text!)!
                 sum1.text = "\(joker1)"
             case "/" :
-                joker1 = Double(temp!)! / Double(sum1.text!)!
-                sum1.text = "\(joker1)"
+                if(sum1.text=="0")
+                {
+                    sum1.text = "None"
+                }
+                else{
+                    joker1 = Double(temp!)! / Double(sum1.text!)!
+                    sum1.text = "\(joker1)"
+                }
             default:
                 sum1.text="error"
             }
@@ -214,8 +223,14 @@ class ViewController: UIViewController {
                 joker = Int(temp!)! * Int(sum1.text!)!
                 sum1.text = "\(joker)"
             case "/" :
+                if(sum1.text=="0")
+                {
+                    sum1.text = "None"
+                }
+                else{
                 joker = Int(temp!)! / Int(sum1.text!)!
                 sum1.text = "\(joker)"
+                }
             default:
                 sum1.text="error"
             }
